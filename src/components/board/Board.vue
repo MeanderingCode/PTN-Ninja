@@ -25,7 +25,7 @@
       @click.right.self.prevent="resetBoardRotation"
       ref="container"
     >
-      <TurnIndicator />
+      <TurnIndicator :hide-names="hideNames" />
 
       <div class="board-row row no-wrap no-pointer-events">
         <div
@@ -96,6 +96,9 @@ export default {
     Square,
     Piece,
     TurnIndicator,
+  },
+  props: {
+    hideNames: Boolean,
   },
   data() {
     return {
